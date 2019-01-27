@@ -14,7 +14,17 @@
 
 <body>
 	<div id="app">
-		<span>{{context.route.from._uri}}</span>
+		<div v-for="route in routes">
+			<!-- ルート情報 -->
+			<div>{{route.attrs.id}}</div>
+			<!-- コンポーネント情報 -->
+			<div v-for="component in route.childs">
+				<div>{{component.name}}</div>
+				<div v-for="attr in component.attrs">
+					<div>{{attr}}</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="index.js"></script>
 </body>

@@ -9,5 +9,6 @@
             </setBody>
             <log id="route-log" message=">>> ${body}"/>
         </route>
+        <route id="_route1"/>
     </camelContext>
 </beans>
